@@ -1,5 +1,7 @@
 // link https://leetcode-cn.com/problems/sqrtx/submissions/
+#include <iostream>
 #include <cmath>
+using namespace std;
 
 class Solution
 {

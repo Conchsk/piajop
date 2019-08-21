@@ -1,4 +1,5 @@
-// link https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
+// link https://leetcode-cn.com/problems/remove-linked-list-elements/
+
 #include <iostream>
 using namespace std;
 
@@ -13,17 +14,17 @@ struct ListNode
 class Solution
 {
 public:
-    ListNode *deleteDuplicates(ListNode *head)
+    ListNode *removeElements(ListNode *head, int val)
     {
-        if (!head)
-            return head;
+        ListNode newHead(0);
+        newHead.next = head;
         ListNode *p, *q, *r;
-        p = head;
+        p = &newHead;
         q = p->next;
         while (q)
         {
             r = q->next;
-            if (p->val == q->val)
+            if (q->val == val)
             {
                 p->next = r;
                 delete q;
@@ -32,6 +33,6 @@ public:
                 p = q;
             q = r;
         }
-        return head;
+        return newHead.next;
     }
 };

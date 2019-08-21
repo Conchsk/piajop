@@ -1,4 +1,5 @@
 // link https://leetcode-cn.com/problems/gray-code/
+#include <iostream>
 #include <vector>
 using namespace std;
 
